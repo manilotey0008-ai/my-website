@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact / Donate - Shri Anant Anath Ashram</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="Shri Anant Anath Ashram Logo" width="150" style="float: left; margin-right: 20px;">
+    <h1>Contact & Donate</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="children.html">Children</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact / Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Contact Us</h2>
+      <p><strong>Landline:</strong> 0164-2750007</p>
+      <p><strong>Office:</strong> 97798-98800</p>
+      <p><strong>Chairman Sukhmandar Singh:</strong> 94177-51600</p>
+      <p><strong>Gen. Secretary Kuldeep Singh:</strong> 94655-51600</p>
+      <p><strong>Main Sevadar Saint Taran Das Ji:</strong> 99176-03330</p>
+      <p><strong>Email:</strong> anantashram06@gmail.com</p>
+    </section>
+
+    <form id="donation-form" onsubmit="event.preventDefault(); showThanks();">
+      <h2>Donate to Support Our Children</h2>
+      <label>Your Name:</label>
+      <input type="text" required>
+
+      <label>Your Email:</label>
+      <input type="email" required>
+
+      <label>Select Donation Amount:</label>
+      <select>
+        <option value="500">₹500</option>
+        <option value="1000">₹1000</option>
+        <option value="2500">₹2500</option>
+        <option value="5000">₹5000</option>
+        <option value="10000">₹10000</option>
+        <option value="custom">Other (Enter Below)</option>
+      </select>
+
+      <label>Custom Amount (optional):</label>
+      <input type="number" placeholder="Enter amount">
+
+      <label>Message:</label>
+      <textarea placeholder="Your message..."></textarea>
+
+      <button type="submit">Donate Now</button>
+    </form>
+
+    <div style="max-width:600px;margin:auto;margin-top:30px;">
+      <h3>Bank/UPI Details:</h3>
+      <p><strong>Account Number:</strong> 0310001050</p>
+      <p><strong>IFSC Code:</strong> PUNB0148110</p>
+      <p><strong>Swift Code:</strong> PUNBINBBISB</p>
+      <p><strong>Branch:</strong> Nathana (Bathinda)</p>
+      <p><strong>Google Pay / PhonePe UPI:</strong> anathashram@upi</p>
+      <a class="btn" href="https://www.cara.in" target="_blank" style="display:inline-block;margin-top:10px;padding:10px 20px;background-color:#ff69b4;color:white;text-decoration:none;border-radius:5px;">Adopt a Child (CARA)</a>
+    </div>
+
+    <div id="thanks-message" style="display:none; text-align:center; padding:2em; color:green;">
+      <h2>Thank you for your donation!</h2>
+      <p>We truly appreciate your support.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shri Anant Anath Ashram</p>
+  </footer>
+
+  <script>
+    function showThanks() {
+      document.getElementById("donation-form").style.display = "none";
+      document.getElementById("thanks-message").style.display = "block";
+    }
+  </script>
+</body>
+</html>
